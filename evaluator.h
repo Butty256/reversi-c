@@ -21,45 +21,45 @@
 #define POW_3_8 6561
 
 #define BOARD_INDEX_4(b, s1, s2, s3, s4) \
-    (((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
-    evaluator_BoardIndex((b), (s4)))
+	(((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
+	evaluator_BoardIndex((b), (s4)))
 #define BOARD_INDEX_5(b, s1, s2, s3, s4, s5) \
-    ((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
-    evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5)))
+	((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
+	evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5)))
 #define BOARD_INDEX_6(b, s1, s2, s3, s4, s5, s6) \
-    (((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
-    evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6)))
+	(((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
+	evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6)))
 #define BOARD_INDEX_7(b, s1, s2, s3, s4, s5, s6, s7) \
-    ((((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
-    evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6))) * 3 + \
-    evaluator_BoardIndex((b), (s7)))
+	((((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
+	evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6))) * 3 + \
+	evaluator_BoardIndex((b), (s7)))
 #define BOARD_INDEX_8(b, s1, s2, s3, s4, s5, s6, s7, s8) \
-    (((((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
-    evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6))) * 3 + \
-    evaluator_BoardIndex((b), (s7))) * 3 + evaluator_BoardIndex((b), (s8)))
+	(((((((evaluator_BoardIndex((b), (s1)) * 3 + evaluator_BoardIndex((b), (s2))) * 3 + evaluator_BoardIndex((b), (s3))) * 3 + \
+	evaluator_BoardIndex((b), (s4))) * 3 + evaluator_BoardIndex((b), (s5))) * 3 + evaluator_BoardIndex((b), (s6))) * 3 + \
+	evaluator_BoardIndex((b), (s7))) * 3 + evaluator_BoardIndex((b), (s8)))
 
 enum
 {
-    PATTERN_ID_LINE4,
-    PATTERN_ID_LINE3,
-    PATTERN_ID_LINE2,
-    PATTERN_ID_DIAG8,
-    PATTERN_ID_DIAG7,
-    PATTERN_ID_DIAG6,
-    PATTERN_ID_DIAG5,
-    PATTERN_ID_DIAG4,
-    PATTERN_ID_EDGE8,
-    PATTERN_ID_CORNER8,
-    PATTERN_ID_PARITY,
-    PATTERN_ID_NUM
+	PATTERN_ID_LINE4,
+	PATTERN_ID_LINE3,
+	PATTERN_ID_LINE2,
+	PATTERN_ID_DIAG8,
+	PATTERN_ID_DIAG7,
+	PATTERN_ID_DIAG6,
+	PATTERN_ID_DIAG5,
+	PATTERN_ID_DIAG4,
+	PATTERN_ID_EDGE8,
+	PATTERN_ID_CORNER8,
+	PATTERN_ID_PARITY,
+	PATTERN_ID_NUM
 };
 
 typedef struct _Evaluator Evaluator;
 struct _Evaluator
 {
-    int *Value[PATTERN_ID_NUM];
-    int MirrorLine[POW_3_8];
-    int MirrorCorner[POW_3_8];
+	int *Value[PATTERN_ID_NUM];
+	int MirrorLine[POW_3_8];
+	int MirrorCorner[POW_3_8];
 };
 
 Evaluator *evaluator_New(void);

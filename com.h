@@ -10,11 +10,11 @@
 typedef struct _Com Com;
 struct _Com
 {
-    Board *Board;
-    Evaluator *Evaluator;
-    int MidDepth;
-    int EndDepth;
-    int Node;
+	Board *Board;
+	Evaluator *Evaluator;
+	int MidDepth;
+	int EndDepth;
+	int Node;
 };
 
 void com_Delete(Com *com);

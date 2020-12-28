@@ -16,9 +16,9 @@
 typedef struct _Board Board;
 struct _Board
 {
-    int Disk[NUM_DISK];
-    int Stack[NUM_STACK];
-    int *Sp;
+	int Disk[NUM_DISK];
+	int Stack[NUM_STACK];
+	int *Sp;
 };
 
 void board_Clear(Board *board);
